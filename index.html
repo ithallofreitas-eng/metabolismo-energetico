@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missão Metabolismo Energético</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#081229,#0c3c60,#06223b);
+color:white;
+overflow-x:hidden;
+}
+
+header{
+
+padding:35px;
+text-align:center;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(8px);
+
+}
+
+header h1{
+
+font-size:50px;
+color:#4DFFB5;
+text-shadow:0 0 20px #00ffae;
+
+}
+
+header p{
+
+margin-top:10px;
+font-size:18px;
+color:#d9f8ff;
+
+}
+
+nav{
+
+display:flex;
+justify-content:center;
+gap:20px;
+padding:20px;
+background:#031321;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+background:#0099ff;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+background:#00ff99;
+color:#081229;
+transform:scale(1.08);
+
+}
+
+.hero{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+padding:60px;
+
+}
+
+.texto{
+
+max-width:550px;
+
+}
+
+.texto h2{
+
+font-size:40px;
+margin-bottom:20px;
+color:#7CFFCB;
+
+}
+
+.texto p{
+
+line-height:1.8;
+font-size:18px;
+
+}
+
+.mito{
+
+width:350px;
+animation:girar 18s linear infinite;
+
+}
+
+@keyframes girar{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+section{
+
+padding:60px 10%;
+
+}
+
+.titulo{
+
+text-align:center;
+font-size:35px;
+margin-bottom:35px;
+color:#59ffbe;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 0 30px #00ffae;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+color:#73ffd8;
+
+}
+
+.game{
+
+margin:auto;
+width:95%;
+max-width:1100px;
+height:650px;
+border-radius:20px;
+overflow:hidden;
+border:4px solid #00ffae;
+box-shadow:0 0 30px #00ffae;
+background:#00131d;
+
+}
+
+iframe{
+
+width:100%;
+height:100%;
+border:none;
+
+}
+
+footer{
+
+padding:25px;
+text-align:center;
+background:#031321;
+margin-top:60px;
+
+}
+
+.bolha{
+
+position:fixed;
+border-radius:50%;
+background:rgba(0,255,170,.15);
+animation:subir linear infinite;
+z-index:-1;
+
+}
+
+@keyframes subir{
+
+from{
+transform:translateY(100vh);
+}
+
+to{
+transform:translateY(-120vh);
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>⚡ Missão Metabolismo Energético ⚡</h1>
+
+<p>
+Explore como a célula produz energia através da glicólise,
+Ciclo de Krebs e Cadeia Respiratória.
+</p>
+
+</header>
+
+<nav>
+
+<a href="#sobre">Sobre</a>
+<a href="#conteudo">Conteúdo</a>
+<a href="#jogo">Jogo</a>
+
+</nav>
+
+<section class="hero" id="sobre">
+
+<div class="texto">
+
+<h2>A Energia da Vida</h2>
+
+<p>
+
+O metabolismo energético é o conjunto de reações responsáveis
+pela produção de ATP, a principal fonte de energia utilizada
+pelas células para realizar suas funções vitais.
+
+</p>
+
+</div>
+
+<img class="mito"
+src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Mitochondrion_mini.svg">
+
+</section>
+
+<section id="conteudo">
+
+<h2 class="titulo">Principais Etapas</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🧬 Glicólise</h3>
+
+<p>
+Ocorre no citoplasma e inicia a quebra da glicose,
+produzindo ATP e piruvato.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔄 Ciclo de Krebs</h3>
+
+<p>
+Acontece na matriz mitocondrial, liberando CO₂
+e moléculas transportadoras de elétrons.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚡ Cadeia Respiratória</h3>
+
+<p>
+Na membrana interna da mitocôndria ocorre
+a maior produção de ATP.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="jogo">
+
+<h2 class="titulo">🎮 Jogo Interativo</h2>
+
+<div class="game">
+
+<!-- Cole aqui o link do seu jogo -->
+
+<iframe
+src="">
+</iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+Desenvolvido para o seminário de Metabolismo Energético • 2026
+
+</footer>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let b=document.createElement("div");
+
+b.className="bolha";
+
+let s=Math.random()*40+10;
+
+b.style.width=s+"px";
+b.style.height=s+"px";
+
+b.style.left=Math.random()*100+"vw";
+
+b.style.animationDuration=(Math.random()*10+10)+"s";
+
+document.body.appendChild(b);
+
+}
+
+</script>
+
+</body>
+</html>
