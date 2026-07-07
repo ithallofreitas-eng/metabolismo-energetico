@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATP Quest | Salve a Célula</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Tela de Loading -->
+
+<div id="loading">
+
+    <div class="loader"></div>
+
+    <h1>Carregando ATP Quest...</h1>
+
+</div>
+
+<!-- Controle de Som -->
+
+<button id="som">
+
+🔊
+
+</button>
+
+<!-- Áudios -->
+
+<audio id="audioAcerto" src="assets/sons/acerto.mp3"></audio>
+
+<audio id="audioErro" src="assets/sons/erro.mp3"></audio>
+
+<audio id="audioVitoria" src="assets/sons/vitoria.mp3"></audio>
+
+<audio id="musica" src="assets/sons/musica.mp3" loop></audio>
+
+<!-- Fundo Animado -->
+<div id="background"></div>
+
+<!-- Partículas -->
+<div id="particles"></div>
+
+<!-- Cabeçalho -->
+
+<header>
+
+    <div class="logo">
+
+        ⚡ ATP QUEST
+
+    </div>
+
+    <nav>
+
+        <a href="#inicio">Início</a>
+
+        <a href="#historia">História</a>
+
+        <a href="#jogo">Jogar</a>
+
+        <a href="#sobre">Sobre</a>
+
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section id="inicio">
+
+    <div class="hero-text">
+
+        <h1>
+
+            MISSÃO METABOLISMO ENERGÉTICO
+
+        </h1>
+
+        <p>
+
+            Salve a produção de ATP e restaure a energia da célula.
+
+        </p>
+
+        <button id="btnComecar">
+
+            ▶ INICIAR MISSÃO
+
+        </button>
+
+    </div>
+
+    <div class="hero-image">
+
+        <div class="mitocondria">
+
+            🧬
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- HISTÓRIA -->
+
+<section id="historia">
+
+<h2>
+
+📖 História
+
+</h2>
+
+<p>
+
+Uma célula perdeu sua capacidade de produzir ATP.
+
+Você foi miniaturizado e enviado para dentro da mitocôndria.
+
+Sua missão será restaurar toda a produção de energia passando pelas etapas da respiração celular.
+
+</p>
+
+</section>
+
+<!-- MAPA -->
+
+<section id="mapa">
+
+<h2>
+
+🗺 Mapa da Missão
+
+</h2>
+
+<div class="mapa">
+
+<div class="fase">
+
+🧬
+
+<h3>Entrada</h3>
+
+</div>
+
+<div class="linha"></div>
+
+<div class="fase">
+
+🍞
+
+<h3>Glicólise</h3>
+
+</div>
+
+<div class="linha"></div>
+
+<div class="fase">
+
+🔄
+
+<h3>Ciclo de Krebs</h3>
+
+</div>
+
+<div class="linha"></div>
+
+<div class="fase">
+
+⚡
+
+<h3>Cadeia Respiratória</h3>
+
+</div>
+
+<div class="linha"></div>
+
+<div class="fase">
+
+🏆
+
+<h3>Vitória</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- JOGO -->
+
+<section id="jogo">
+
+<h2>
+
+🎮 Painel da Missão
+
+</h2>
+
+<div class="game">
+
+<!-- Painel -->
+
+<div id="painel">
+
+<div class="card">
+
+<h3>⚡ ATP</h3>
+
+<span id="atp">0</span>/100
+
+</div>
+
+<div class="card">
+
+<h3>❤️ Vidas</h3>
+
+<span id="vidas">3</span>
+
+</div>
+
+<div class="card">
+
+<h3>🏆 Pontos</h3>
+
+<span id="pontos">0</span>
+
+</div>
+
+<div class="card">
+
+<h3>⏱ Tempo</h3>
+
+<span id="cronometro">
+
+02:00
+
+</span>
+
+</div>
+
+</div>
+
+<!-- Barra ATP -->
+
+<div class="barra">
+
+<div id="progresso"></div>
+
+</div>
+
+<!-- Barra Perguntas -->
+
+<div class="barraPerguntas">
+
+<div id="progressoPerguntas"></div>
+
+</div>
+
+<!-- Área das Perguntas -->
+
+<div id="quiz">
+
+<h2 id="fase"></h2>
+
+<h3 id="pergunta"></h3>
+
+<div id="alternativas"></div>
+
+<button id="btnResponder">
+
+Responder
+
+</button>
+
+<div id="explicacao"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Curiosidade -->
+
+<section id="curiosidade">
+
+<h2>
+
+🧠 Curiosidade Científica
+
+</h2>
+
+<p id="curiosidadeTexto">
+
+Após cada pergunta aparecerá uma curiosidade sobre metabolismo energético.
+
+</p>
+
+</section>
+
+<!-- Vitória -->
+
+<section id="vitoria" class="hidden">
+
+<h1>
+
+🏆 MISSÃO CONCLUÍDA
+
+</h1>
+
+<h2>
+
+ATP Restaurado!
+
+</h2>
+
+<p id="resultadoFinal"></p>
+
+<button onclick="location.reload()">
+
+Jogar Novamente
+
+</button>
+
+</section>
+
+<!-- Derrota -->
+
+<section id="derrota" class="hidden">
+
+<h1>
+
+💀 GAME OVER
+
+</h1>
+
+<h2>
+
+A célula ficou sem energia.
+
+</h2>
+
+<button onclick="location.reload()">
+
+Tentar Novamente
+
+</button>
+
+</section>
+
+<footer id="sobre">
+
+<p>
+
+ATP Quest - Projeto Educacional sobre Metabolismo Energético
+
+</p>
+
+<p>
+
+Desenvolvido para fins acadêmicos.
+
+</p>
+
+</footer>
+
+<script src="perguntas.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
