@@ -212,3 +212,61 @@ botao.addEventListener("click", verificarResposta);
 // ----------------------------
 
 iniciarJogo();
+
+// ----------------------------
+
+function telaVitoria(){
+
+    document.querySelector(".game").innerHTML = `
+
+        <div style="text-align:center;padding:40px;">
+
+            <h1>🏆 MISSÃO CONCLUÍDA!</h1>
+
+            <h2>ATP Restaurado com sucesso!</h2>
+
+            <br>
+
+            <h2>⚡ ATP Produzido: ${atp}</h2>
+
+            <h2>⭐ Pontuação: ${pontos}</h2>
+
+            <br>
+
+            <button onclick="location.reload()">
+
+                Jogar Novamente
+
+            </button>
+
+        </div>
+
+    `;
+
+}
+
+// ----------------------------
+
+function telaDerrota(){
+
+    document.querySelector(".game").innerHTML = `
+
+        <div style="text-align:center;padding:40px;">
+
+            <h1>💀 GAME OVER</h1>
+
+            <h2>A célula ficou sem energia.</h2>
+
+            <br>
+
+            <button onclick="location.reload()">
+
+                Tentar Novamente
+
+            </button>
+
+        </div>
+
+    `;
+
+}
